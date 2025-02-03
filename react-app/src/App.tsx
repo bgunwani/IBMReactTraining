@@ -1,10 +1,11 @@
-import Users from "./users"
+import Counter from "./Counter"
 
 function App() {
 
   return (
     <>
-      <Users />
+      {/* <Users /> */}
+      <Counter />
     </>
   )
 }
