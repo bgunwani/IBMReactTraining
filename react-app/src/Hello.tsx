@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 // Props - means properties (component inputs)
 interface HelloProps {
     username?: string;
     age?: number;
-    location?: string
+    location?: string;
     hobbies?: string[]
 }
 
@@ -18,9 +19,16 @@ const Hello: React.FC<HelloProps> = ({ username = "Guest", age = 18, location = 
             <p>Age: {age}</p>
             <p>Location: {location}</p>
             <p>Hobbies: {hobbies.length > 0 ? hobbies.join(", ") : "Non Listed"}</p>
-
         </>
     )
 }
+
+
+Hello.propTypes = {
+    username: PropTypes.string,
+    age: PropTypes.number,
+    location: PropTypes.string,
+    hobbies: PropTypes.arrayOf(PropTypes.string),
+} as any;
 
 export default Hello;
