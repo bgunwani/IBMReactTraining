@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
 import Users from "./components/Users";
+import Employees from "./components/Employees";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
                   <Link className="nav-link" to="/users">Users</Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="/employees">Employees</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
@@ -40,6 +44,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/users" element={<Users />} />
+            <Route path="/employees" element={<Employees />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
