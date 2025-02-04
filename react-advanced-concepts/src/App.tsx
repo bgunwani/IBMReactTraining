@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
+import Users from "./components/Users";
 
 function App() {
   return (
@@ -23,7 +24,10 @@ function App() {
                   <Link className="nav-link" to="/about">About</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/contactt">Contact</Link>
+                  <Link className="nav-link" to="/users">Users</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -35,6 +39,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/users" element={<Users />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
