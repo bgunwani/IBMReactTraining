@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "id": "101",
+      "name": "King Kochhar",
+      "email": "king.kochhar@gmail.com"
+    },
+    {
+      "id": "102",
+      "name": "John Smith",
+      "email": "john.smith@gmail.com"
+    },
+    {
+      "id": "103",
+      "name": "Gautam Bhalla",
+      "email": "gautam.bhalla@gmail.com"
+    },
+    {
+      "id": "104",
+      "name": "Gautam Bhalla",
+      "email": "gautam.bhalla@gmail.com"
+    },
+    {
+      "id": "3bb1",
+      "name": "",
+      "email": "",
+      "": "karthik@example.com"
+    },
+    {
+      "id": "b69d",
+      "name": "",
+      "email": "",
+      "": "karthik@gmail.com"
+    },
+    {
+      "id": "ff3f",
+      "name": "",
+      "email": ""
+    },
+    {
+      "id": "cf75",
+      "name": "",
+      "email": ""
+    },
+    {
+      "id": "afa8",
+      "name": "",
+      "email": "",
+      "": "karthik@gmail.comaaa"
+    }
+  ]
+}
