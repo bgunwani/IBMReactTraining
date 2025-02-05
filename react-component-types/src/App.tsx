@@ -5,6 +5,8 @@ import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
 import Users from "./components/Users";
 import Employees from "./components/Employees";
+import Parent from "./components/Parent";
+import Child from "./components/Child";
 
 function App() {
   return (
@@ -31,6 +33,9 @@ function App() {
                   <Link className="nav-link" to="/employees">Employees</Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="/parent">Parent</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
@@ -45,6 +50,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/users" element={<Users />} />
             <Route path="/employees" element={<Employees />} />
+            <Route path="/parent" element={<Parent />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
