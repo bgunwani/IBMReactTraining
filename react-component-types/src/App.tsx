@@ -7,6 +7,7 @@ import Users from "./components/Users";
 import Employees from "./components/Employees";
 import Parent from "./components/Parent";
 import Child from "./components/Child";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
                   <Link className="nav-link" to="/parent">Parent</Link>
                 </li>
                 <li className="nav-item">
+                  <Link className="nav-link" to="/counter">Counter</Link>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
@@ -51,6 +55,7 @@ function App() {
             <Route path="/users" element={<Users />} />
             <Route path="/employees" element={<Employees />} />
             <Route path="/parent" element={<Parent />} />
+            <Route path="/counter" element={<Counter />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
