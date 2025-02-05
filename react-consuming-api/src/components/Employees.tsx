@@ -56,6 +56,7 @@ const Employees = () => {
                     type="text"
                     className="form-control mb-2"
                     placeholder="Name"
+                    name="name"
                     value={form.name}
                     onChange={handleChange} />
 
@@ -63,6 +64,7 @@ const Employees = () => {
                     type="email"
                     className="form-control mb-2"
                     placeholder="Email"
+                    name="email"
                     value={form.email}
                     onChange={handleChange} />
 
