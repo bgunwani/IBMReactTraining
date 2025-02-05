@@ -49,12 +49,25 @@ const Employees = () => {
         fetch(`${API_URL}/${id}`, { method: 'DELETE' })
             .then(() => setEmployees(employees.filter((emp) => emp.id !== id)))
             .catch((error) => console.error(error))
+    }
+
+    const updateEmployee = (id: number) => {
+        fetch(`${API_URL}/${id}`, {
+            method: 'PUT',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(form)
+        })
+            .then(() => {
+                setEmployees(employees.map((emp) => (emp.id === id ? { ...form, id } : emp)));
+                setForm({ name: "", email: "" })
+            })
+            .catch((error) => console.error(error))
 
     }
 
     return (
         <div className="container">
-            <div className="text-center text-primary mb-4">Employee Management</div>
+            <h3 className="text-center text-primary">Employee Management</h3>
 
             {/* Employee Form */}
             <div className="card p-4 mb-4 shadow">
@@ -77,7 +90,7 @@ const Employees = () => {
 
                 <div className="d-grid gap-2 d-md-block">
                     <button className="btn btn-success me-2" onClick={addEmployee}>Add</button>
-                    <button className="btn btn-primary">Update</button>
+                    <button className="btn btn-primary" onClick={() => updateEmployee(form.id!)}>Update</button>
                 </div>
 
             </div>
@@ -107,7 +120,7 @@ const Employees = () => {
                                     <td>{emp.name}</td>
                                     <td>{emp.email}</td>
                                     <td>
-                                        <button className="btn btn-sm btn-info me-2">Edit</button>
+                                        <button className="btn btn-sm btn-info me-2" onClick={() => setForm(emp)}>Edit</button>
                                         <button className="btn btn-sm btn-danger" onClick={() => deleteEmployee(emp.id!)}>Delete</button>
                                     </td>
                                 </tr>
