@@ -45,6 +45,13 @@ const Employees = () => {
             .catch((error) => { console.error(error); })
     }
 
+    const deleteEmployee = (id: number) => {
+        fetch(`${API_URL}/${id}`, { method: 'DELETE' })
+            .then(() => setEmployees(employees.filter((emp) => emp.id !== id)))
+            .catch((error) => console.error(error))
+
+    }
+
     return (
         <div className="container">
             <div className="text-center text-primary mb-4">Employee Management</div>
@@ -90,6 +97,7 @@ const Employees = () => {
                                 <th>Id</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -98,6 +106,10 @@ const Employees = () => {
                                     <td>{emp.id}</td>
                                     <td>{emp.name}</td>
                                     <td>{emp.email}</td>
+                                    <td>
+                                        <button className="btn btn-sm btn-info me-2">Edit</button>
+                                        <button className="btn btn-sm btn-danger" onClick={() => deleteEmployee(emp.id!)}>Delete</button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
