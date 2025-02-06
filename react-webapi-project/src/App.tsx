@@ -8,7 +8,6 @@ import Employees from "./components/Employees";
 import Parent from "./components/Parent";
 import Child from "./components/Child";
 import Counter from "./components/Counter";
-import ProductList from "./components/ProductList";
 
 function App() {
   return (
@@ -41,9 +40,6 @@ function App() {
                   <Link className="nav-link" to="/counter">Counter</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/products">Products</Link>
-                </li>
-                <li className="nav-item">
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
@@ -60,7 +56,6 @@ function App() {
             <Route path="/employees" element={<Employees />} />
             <Route path="/parent" element={<Parent />} />
             <Route path="/counter" element={<Counter />} />
-            <Route path="/products" element={<ProductList />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

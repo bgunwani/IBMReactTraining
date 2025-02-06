@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "id": "103",
+      "name": "Gautam Bhalla Bhalla",
+      "email": "gautam.bhalla@example.com"
+    },
+    {
+      "id": "104",
+      "name": "Gautam Bhalla",
+      "email": "gautam.bhalla@gmail.com"
+    },
+    {
+      "id": "1008",
+      "name": "Bhawna Gunwani",
+      "email": "bhawna.gunwani@gmail.com"
+    }
+  ],
+  "customers": [
+    {
+      "id": "103",
+      "name": "Gautam Bhalla Bhalla",
+      "email": "gautam.bhalla@example.com"
+    },
+    {
+      "id": "104",
+      "name": "Gautam Bhalla",
+      "email": "gautam.bhalla@gmail.com"
+    },
+    {
+      "id": "1008",
+      "name": "Bhawna Gunwani",
+      "email": "bhawna.gunwani@gmail.com"
+    }
+  ]
+}
