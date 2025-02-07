@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { replace, useNavigate } from "react-router-dom";
 import AuthService from "../services/AuthService";
 
-const Login = ({ onLogin }: { onLogin: () => void }) => {
+const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -10,8 +10,7 @@ const Login = ({ onLogin }: { onLogin: () => void }) => {
 
     const handleLogin = () => {
         if (AuthService.login(username, password)) {
-            onLogin();
-            navigate("/dashboard");
+            navigate("/dashboard", { replace: true });
         } else {
             setError("Invalid Credentials");
         }
