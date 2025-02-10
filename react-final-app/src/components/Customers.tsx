@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
+import { useCustomerContext } from "../context/CustomerContext";
 
 
-const customers = [
-    { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
-    { id: 2, name: 'John Smith', email: 'john.smith@example.com' },
-    { id: 3, name: 'King Kochhar', email: 'king.kochhar@example.com' }
-]
+// const customers = [
+//     { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
+//     { id: 2, name: 'John Smith', email: 'john.smith@example.com' },
+//     { id: 3, name: 'King Kochhar', email: 'king.kochhar@example.com' }
+// ]
 
 const Customers = () => {
+    const { customers } = useCustomerContext();
     return (
         <>
             <div className="container mt-5">
