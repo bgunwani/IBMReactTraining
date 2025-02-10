@@ -8,6 +8,8 @@ import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import Unauthorized from './components/Unauthorized';
 import Navbar from './components/Navbar';
+import Customers from './components/Customers';
+import CustomerDetail from './components/CustomerDetail';
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/admin" element={<ProtectedRoute allowedRoutes={["admin"]}><AdminDashboard /></ProtectedRoute>}></Route>
           <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />}></Route>
           <Route path="/unauthorized" element={<Unauthorized />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/customer-detail/:id" element={<CustomerDetail />} />
         </Routes>
       </Router >
     </>

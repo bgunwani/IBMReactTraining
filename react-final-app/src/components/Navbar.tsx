@@ -8,6 +8,7 @@ const Navbar = () => {
     return (
         <nav className='navbar navbar-light bg-light px-3'>
             <a className='navbar-brand' href='/'>React Auth</a>
+            <a className='navbar-link' href='/customers'>Customers</a>
             {isAuthenticated && (
                 <button
                     className='btn btn-danger'
