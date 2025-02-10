@@ -13,6 +13,8 @@ const Customers = () => {
     return (
         <>
             <div className="container mt-5">
+                <Link to={'/add-customer'} className="btn btn-sm btn-secondary">Add New Customer</Link>
+                <hr />
                 <h2>Customers List</h2>
                 <ul className="list-group">
                     {customers.map((customer) => (

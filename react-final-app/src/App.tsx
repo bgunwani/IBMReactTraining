@@ -11,6 +11,7 @@ import Navbar from './components/Navbar';
 import Customers from './components/Customers';
 import CustomerDetail from './components/CustomerDetail';
 import { CustomerProvider } from './context/CustomerContext';
+import AddCustomer from './components/AddCustomer';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} />}></Route>
             <Route path="/unauthorized" element={<Unauthorized />} />
             <Route path="/customers" element={<Customers />} />
+            <Route path="/add-customer" element={<AddCustomer />} />
             <Route path="/customer-detail/:id" element={<CustomerDetail />} />
           </Routes>
         </Router >

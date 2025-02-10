@@ -29,7 +29,8 @@ export const CustomerProvider = ({ children }: { children: ReactNode }) => {
     const [customers, setCustomers] = useState<Customer[]>([
         { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
         { id: 2, name: 'John Smith', email: 'john.smith@example.com' },
-        { id: 3, name: 'King Kochhar', email: 'king.kochhar@example.com' }
+        { id: 3, name: 'King Kochhar', email: 'king.kochhar@example.com' },
+        { id: 4, name: 'Gautam Bhalla', email: 'gautam.bhalla@example.com' }
     ]);
 
     // Function to Add Customer

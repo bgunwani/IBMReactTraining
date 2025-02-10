@@ -1,13 +1,9 @@
 import { Link, useParams } from "react-router-dom";
-
-const customers = [
-    { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
-    { id: 2, name: 'John Smith', email: 'john.smith@example.com' },
-    { id: 3, name: 'King Kochhar', email: 'king.kochhar@example.com' }
-]
+import { useCustomerContext } from "../context/CustomerContext";
 
 const CustomerDetail = () => {
     const { id } = useParams();  // Get Customer Id from URL
+    const { customers } = useCustomerContext();
     const customer = customers.find(c => c.id === Number(id));
 
     if (!customer) return (<h2 className="container mt-5 text-danger">Customer Not Found.</h2>)
